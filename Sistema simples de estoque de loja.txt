@@ -1,0 +1,67 @@
+dic_produtos = {"notebook": 3500, "mouse": 80, "teclado": 150, "monitor": 900}
+
+# PARTE 1: CONSULTA DE PRODUTO
+
+#Peça ao usuário:
+#Digite o nome do produto:
+produto_buscado = input("Digite o nome do produto:")
+produto_buscado = produto_buscado.strip()
+produto_buscado = produto_buscado.lower()
+
+#Regras:
+#Se o produto existir no dicionário
+#Mostrar:
+#Produto encontrado
+#Produto: X
+#Preço: R$X
+#Se não existir:
+#Produto não encontrado
+
+if produto_buscado in dic_produtos:
+    print("Produto encontrado")
+    print(f"Produto: {produto_buscado}")
+    print(f"Preço: R${dic_produtos[produto_buscado]:,.2f}")
+else:
+    print("Produto não encontrado")
+
+# PARTE 2: ATUALIZAÇÃO DE PREÇO 
+
+#Aumente o preço do notebook em 10%.
+#Mostre o novo preço.
+dic_produtos["notebook"] = dic_produtos["notebook"] * 1.1 
+print(f"Novo preço do Notebook: R${dic_produtos['notebook']:,.2f}")
+
+# PARTE 3: ADICIONAR NOVO PRODUTO
+
+
+#Adicione um novo produto:
+#headset → 250
+#Depois mostre o dicionário atualizado.
+
+dic_produtos["headset"] = 250 
+print(f"Dicionário atualizado: {dic_produtos}")
+
+#PARTE 4: REMOVER PRODUTO
+
+#Remova o produto mouse usando pop().
+#Mostre:
+#Produto removido: X
+produto_removido = "mouse"
+preco_removido = dic_produtos.pop(produto_removido)
+print(f"Produto removido: {produto_removido} - R${preco_removido:,.2f}")
+
+# PARTE 5: ANÁLISE DE ESTOQUE
+
+#Mostre:
+#1️⃣ Quantos produtos existem no estoque
+#2️⃣ Uma lista com todos os produtos
+#3️⃣ Uma lista com todos os preços
+
+qtde_produtos = len(dic_produtos)
+print(f"Quantidade de produtos no estoque: {qtde_produtos}")
+
+lista_produtos = list(dic_produtos.keys())
+print(f"Lista dos produtos: {lista_produtos}")
+
+lista_precos = list(dic_produtos.values())
+print(f"Lista dos preços: {lista_precos}")
