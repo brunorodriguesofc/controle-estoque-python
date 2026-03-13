@@ -35,17 +35,14 @@ Durante o desenvolvimento foram utilizados conceitos como:
 
 Passo a passo
 1. Clone ou baixe o repositório
-   
-3. bashgit clone https://github.com/brunorodriguesofc/controle-estoque-python
+bashgit clone https://github.com/brunorodriguesofc/controle-estoque-python
 Ou clique em Code → Download ZIP e extraia a pasta.
 
-4. Acesse a pasta do projeto
+3. Acesse a pasta do projeto
 bashcd controle-estoque-python
 
-6. Execute o arquivo
+4. Execute o arquivo
 bashpython estoque.py
 
-Como usar:
-Clone ou baixe o repositório
 
 
